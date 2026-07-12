@@ -3,7 +3,7 @@ import { Bebas_Neue, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/footer";
-import MobileNav from "@/components/MobileNav";
+import MobileNav from '@/components/MobileNav';
 
 const display = Bebas_Neue({ weight: "400", subsets: ["latin"], variable: "--font-display" });
 const body = Inter({ subsets: ["latin"], variable: "--font-body" });
