@@ -95,3 +95,16 @@ export async function getMovieDetails(movieId: string) {
     return null;
   }
 }
+
+// 7. Search Movies
+export async function searchTitles(query: string) {
+  try {
+    const res = await fetch(`${BASE_URL}/search/movie?api_key=${TMDB_API_KEY}&query=${encodeURIComponent(query)}&language=en-US`);
+    if (!res.ok) throw new Error('TMDB search response error');
+    const data = await res.json();
+    return data.results || [];
+  } catch (error) {
+    console.error("TMDB Fetch Error (Search):", error);
+    return [];
+  }
+}
