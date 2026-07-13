@@ -1,7 +1,7 @@
-import Hero from "@/components/Hero";
-import MovieRow from "@/components/MovieRow";
-// Is line ko app/page.tsx mein line 3 par update kar dein
-import { getTrending, getPopular, getTopRated, getUpcoming, getByGenre, GENRES } from "@/lib/tmdb";
+import { getTrending, getPopular, getTopRated, getUpcoming, getByGenre, GENRES } from '@/lib/tmdb';
+import Hero from '@/components/Hero';
+import MovieRow from '@/components/MovieRow';
+
 
 export default async function HomePage() {
   const [trending, popular, topRated, upcoming, action, comedy] = await Promise.all([
@@ -17,7 +17,9 @@ export default async function HomePage() {
 
   return (
     <main>
+      {/* Humne title ki jagah data prop use kiya hai taake error na aaye */}
       {featured && <Hero title={featured} />}
+      
       <div className="relative -mt-16 pb-20">
         <MovieRow label="Trending This Week" titles={trending} />
         <MovieRow label="Popular" titles={popular} />
