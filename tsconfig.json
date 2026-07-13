@@ -33,7 +33,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-  ],
+, "app/contact/page.tsx.bak"  ],
   "exclude": [
     "node_modules"
   ]

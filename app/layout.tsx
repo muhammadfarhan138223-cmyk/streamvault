@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Bebas_Neue, Inter } from "next/font/google";
-import "./globals.css";
+import './globals.css';
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/footer";
 import MobileNav from '@/components/MobileNav';
