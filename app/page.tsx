@@ -17,7 +17,7 @@ export default async function HomePage() {
 
   return (
     <main>
-      {/* Humne title ki jagah data prop use kiya hai taake error na aaye */}
+
       {featured && <Hero title={featured} />}
       
       <div className="relative -mt-16 pb-20">
